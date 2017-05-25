@@ -18,7 +18,7 @@ public class MainSpring {
 		SomeBean otherBean = (SomeBean) context.getBean("otherBean");
 		System.out.println(otherBean);
 
-		// not working _1 for SomeBean bean with constructors...
+		// w wlasciwoscami nie ma problemu bo ma gettery settery
 		SomeBean thirdBean = (SomeBean) context.getBean("thirdBean");
 		System.out.println(thirdBean);
 	}
