@@ -16,5 +16,7 @@ public class MainSpring {
 		SomeBean someBean = (SomeBean) context.getBean("someBean");
 
 		System.out.println(Arrays.toString(someBean.getLongsArray()));
+		System.out.println(someBean.getIntegersSet());
+		System.out.println(someBean.getStringsList());
 	}
 }
