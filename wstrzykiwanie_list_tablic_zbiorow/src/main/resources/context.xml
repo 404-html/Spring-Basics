@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="someBean" class="pl.raziel.spring.SomeBean">
+
+        <constructor-arg>
+            <list>
+                <value>dupa</value>
+                <value>Twoja</value>
+                <value>Stara</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg>
+            <set>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </set>
+        </constructor-arg>
+        <constructor-arg>
+            <array>
+                <value>1</value>
+            </array>
+        </constructor-arg>
+    </bean>
+
+</beans>
