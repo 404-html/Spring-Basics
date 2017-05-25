@@ -6,6 +6,7 @@
 
     <groupId>pl.raziel.spring</groupId>
     <artifactId>Spring-Basics</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <build>
@@ -27,6 +28,7 @@
         <module>static_factory_method</module>
         <module>wlasne_metody_fabrykujace</module>
         <module>instacyjne_metody_fabrykujace</module>
+        <module>przestrzenie_nazw_p_i_c</module>
     </modules>
 
     <dependencies>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="someLocale" class="java.util.Locale" factory-method="getDefault"/>
+
+    <bean id="someUser" class="pl.raziel.spring.User">
+        <constructor-arg value="Daniel"/>
+        <constructor-arg value="31"/>
+        <constructor-arg ref="someLocale"/>
+    </bean>
+
+    <bean id="someBean" class="pl.raziel.spring.SomeBean">
+        <property name="user" ref="someUser"/>
+        <property name="stringValue" value="jakis_String"/>
+        <property name="intValue" value="100"/>
+    </bean>
+
+
+    <bean id="otherUser" class="pl.raziel.spring.User"
+          c:name="Janusz" c:age="32" c:locale-ref="someLocale"/>
+
+
+    <bean id="otherBean" class="pl.raziel.spring.SomeBean"
+          p:stringValue="another_StringValue" p:intValue="200" p:user-ref="otherUser"/>
+
+    <bean id="thirdUser" class="pl.raziel.spring.User"
+          c:_0="DanielSan" c:_1="49" c:_2="53"/>
+
+    <bean id="thirdBean" class="pl.raziel.spring.SomeBean"
+          p:stringValue="another_StringValue" p:intValue="200" p:user-ref="thirdUser"/>
+</beans>
