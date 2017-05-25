@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd">
+
+
+    <bean id="someBean" class="pl.raziel.spring.SomeBean">
+        <property name="settings">
+            <props>
+                <prop key="klucz1">Wartość1</prop>
+                <prop key="klucz2">Wartość2</prop>
+                <prop key="klucz3">Wartość3</prop>
+            </props>
+        </property>
+
+        <property name="locales">
+            <map>
+                <entry key="Niemcy">
+                    <util:constant static-field="java.util.Locale.GERMANY"/>
+                </entry>
+                <entry key="Francja">
+                    <util:constant static-field="java.util.Locale.FRANCE"/>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="france" class="java.lang.String">
+        <constructor-arg value="Francja"/>
+    </bean>
+
+    <bean id="niemcy" class="java.lang.String">
+        <constructor-arg value="Niemcy"/>
+    </bean>
+
+    <bean id="otherBean" class="pl.raziel.spring.SomeBean">
+        <property name="settings">
+            <props>
+                <prop key="key1">value_1</prop>
+                <prop key="key2">value_2</prop>
+            </props>
+        </property>
+
+        <property name="locales">
+            <map>
+                <entry key-ref="niemcy">
+                    <util:constant static-field="java.util.Locale.GERMANY"/>
+                </entry>
+                <entry>
+                    <key>
+                        <ref bean="france"/>
+                    </key>
+                    <util:constant static-field="java.util.Locale.FRANCE"/>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+
+</beans>

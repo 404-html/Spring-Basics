@@ -30,6 +30,7 @@
         <module>instacyjne_metody_fabrykujace</module>
         <module>przestrzenie_nazw_p_i_c</module>
         <module>wstrzykiwanie_list_tablic_zbiorow</module>
+        <module>mapy_i_wlasciwosci</module>
     </modules>
 
     <dependencies>
@@ -38,11 +39,5 @@
             <artifactId>spring-context</artifactId>
             <version>4.3.6.RELEASE</version>
         </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
-        </dependency>
-
     </dependencies>
 </project>
