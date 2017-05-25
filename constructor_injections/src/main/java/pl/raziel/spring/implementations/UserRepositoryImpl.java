@@ -8,12 +8,8 @@ public class UserRepositoryImpl implements UserRepository {
 
 	private Logger logger;
 
-	public UserRepositoryImpl() {
-	}
-
-	public UserRepositoryImpl(Logger logger, String localization, String name) {
+	public UserRepositoryImpl(Logger logger) {
 		this.logger = logger;
-		logger.log("Lokalizacja repo: " + localization + "_" + name);
 	}
 
 	public User createUser(String name) {
