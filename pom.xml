@@ -31,6 +31,7 @@
         <module>przestrzenie_nazw_p_i_c</module>
         <module>wstrzykiwanie_list_tablic_zbiorow</module>
         <module>mapy_i_wlasciwosci</module>
+        <module>autowire_by_name</module>
     </modules>
 
     <dependencies>
