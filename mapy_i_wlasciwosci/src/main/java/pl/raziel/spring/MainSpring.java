@@ -15,5 +15,8 @@ public class MainSpring {
 
 		System.out.println("\n" + otherBean.getLocales());
 		System.out.println(otherBean.getSettings());
+
+		User user = (User) context.getBean("user");
+		System.out.println(user);
 	}
 }

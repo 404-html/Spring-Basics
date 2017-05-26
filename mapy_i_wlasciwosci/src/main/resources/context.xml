@@ -59,5 +59,18 @@
         </property>
     </bean>
 
+    <bean id="user" class="pl.raziel.spring.User">
+        <property name="name" value="JanuszSoft"/>
+        <property name="address">
+            <bean class="pl.raziel.spring.Address">
+                <constructor-arg value="Lodz"/>
+                <constructor-arg value="91-315"/>
+                <constructor-arg value="Wiernej Twojej Starej"/>
+                <constructor-arg value="3"/>
+            </bean>
+        </property>
+
+    </bean>
+
 
 </beans>
