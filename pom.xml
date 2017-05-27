@@ -33,6 +33,7 @@
         <module>mapy_i_wlasciwosci</module>
         <module>autowire_by_name</module>
         <module>_14_autowire_by_type_and_constructor</module>
+        <module>_15_Invoking_methods_while_creating_beans</module>
     </modules>
 
     <dependencies>
