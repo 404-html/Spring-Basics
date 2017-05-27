@@ -13,6 +13,9 @@
         <property name="name" value="Injected bean 2"/>
     </bean>
 
-    <bean id="someBean" class="pl.raziel.spring.SomeBean" autowire="byName"/>
+    <bean id="someBean" class="pl.raziel.spring.SomeBean" autowire="byName">
+        <!--<property name="injectedBean2" ref="injectedBean1"/>--> <!--nadpisanie w jawny sposób-->
+    </bean>
+
 
 </beans>

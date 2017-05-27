@@ -32,6 +32,7 @@
         <module>wstrzykiwanie_list_tablic_zbiorow</module>
         <module>mapy_i_wlasciwosci</module>
         <module>autowire_by_name</module>
+        <module>_14_autowire_by_type_and_constructor</module>
     </modules>
 
     <dependencies>
